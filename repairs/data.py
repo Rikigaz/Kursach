@@ -1,5 +1,5 @@
 locomotives_data = [
-    'ТЭМ2', 'ТЭМ18', 'ТЭМ7', 'ТЭМ18м', 'ТЭМ14'
+    'BMW', 'RENO', 'LADA', 'Lexus', 'Масквич'
 ]
 parts_data = [
     "Колодка тормозная гребневая",
@@ -72,31 +72,36 @@ types_repair_data = [
 ]
 users_data = [
     (
-        'Имя клиента 1', 'Фамилия клиента 1', 'customer1',
-        'customer1@ru.ru', 'CUSTOMER', '11111'
+        'Имя клиента 1', 'Фамилия клиента 1', 'admin',
+        'admin@hochudomoy.ru', 'CUSTOMER', 'admin1234'
     ),
     (
-        'Имя клиента 2', 'Фамилия клиента 1', 'customer2',
-        'customer2@ru.ru', 'CUSTOMER', '11111'
+        'Имя клиента 2', 'Фамилия клиента 1', 'rikiga',
+        'rikiga@mail.ru', 'CUSTOMER', 'igor1234'
     ),
     (
-        'Имя Техник', 'Фамилия Техник', 'technician',
-        'technician@ru.ru', 'TECHNICIAN', '11111'
+        'Имя Техник 1', 'Фамилия Техник 1', 'technician',
+        'test_technician1@mail.ru', 'TECHNICIAN', '11111'
+    ),
+(
+        'Имя Техник 2', 'Фамилия Техник 2', 'technician',
+        'test_technician2@mail.ru', 'TECHNICIAN', '11111'
     ),
     (
-        'Имя Мастер', 'Фамилия Мастер', 'master',
-        'master@ru.ru', 'MASTER', '11111'
+        'Имя Мастер 1', 'Фамилия Мастер 1', 'master',
+        'test_master1@mail.ru', 'MASTER', '11111'
+    ),
+(
+        'Имя Мастер 2', 'Фамилия Мастер 2', 'master',
+        'test_master2@mail.ru', 'MASTER', '11111'
     ),
     (
-        'Имя Слесарь 1', 'Фамилия Слесарь 1', 'worker1',
-        'worker1@ru.ru', 'WORKER', '11111'
+        'Имя Автомеханик 1', 'Фамилия автомеханика 1', 'worker1',
+        '	test_worker1@mail.ru', 'WORKER', '11111'
     ),
     (
-        'Имя Слесарь 2', 'Фамилия Слесарь 2', 'worker2',
-        'worker2@ru.ru', 'WORKER', '11111'
+        'Имя Автомеханик 2', 'Фамилия автомеханика 2', 'worker2',
+        '	test_worker2@mail.ru', 'WORKER', '11111'
     ),
-    (
-        'Имя Слесарь 3', 'Фамилия Слесарь 3', 'worker3',
-        'worker3@ru.ru', 'WORKER', '11111'
-    ),
+
 ]
