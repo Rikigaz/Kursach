@@ -15,7 +15,6 @@ from users.models import Role
 
 
 def create_data(apps, schema_editor):
-    """Создаем записи тв таблицах"""
     for locomotive in locomotives_data:
         LocomotiveFactory(name=locomotive)
     for part in parts_data:
@@ -45,7 +44,6 @@ def create_data(apps, schema_editor):
 
 
 def remove_data(apps, schema_editor):
-    """Очищаем таблицы"""
     apps.get_model('repairs', 'Locomotive').objects.all().delete()
     apps.get_model('repairs', 'TypeRepair').objects.all().delete()
     apps.get_model('repairs', 'Works').objects.all().delete()

@@ -8,7 +8,6 @@ User = get_user_model()
 
 
 class CustomerLoginRequiredMixin(AccessMixin):
-    """Verify that the current user is authenticated and role is CUSTOMER"""
 
     def dispatch(self, request, *args, **kwargs):
         if (
@@ -20,11 +19,9 @@ class CustomerLoginRequiredMixin(AccessMixin):
 
 
 class RepairMixin:
-    """Миксин для фильтрации заявок по роли пользователя"""
 
     @staticmethod
     def _get_repair_filter(user: User) -> dict:
-        """Возвращаем фильтр для заявки для роли пользователя"""
         repair_filter = {
             Role.CUSTOMER: {
                 'users': user

@@ -20,7 +20,6 @@ class Command(BaseCommand):
     help = 'Наполнить БД тестовыми данными'
 
     def handle(self, *args, **options):
-        """Создание данных в БД"""
         for locomotive in locomotives_data:
             LocomotiveFactory(name=locomotive)
         for part in parts_data:

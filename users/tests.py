@@ -8,17 +8,14 @@ User = get_user_model()
 
 
 class TestRegisterView(TestCase):
-    """Тестируем view регистрации пользователя"""
 
     def test_get(self):
-        """Получение формы регистрации"""
         response = self.client.get(reverse('register'))
 
         self.assertEqual(response.status_code, 200)
         self.assertIsInstance(response.context['form'], UserCreationForm)
 
     def test_post_errors_form(self):
-        """Тестируем регистрацию с ошибкой"""
 
         payload = {
             'username': 'username',
@@ -33,7 +30,6 @@ class TestRegisterView(TestCase):
         self.assertIn('password2', response.context['form'].errors)
 
     def test_post_ok(self):
-        """Тестируем что пользователь зарегистрировался"""
 
         email = 'test_email@mail.ru'
 

@@ -10,7 +10,7 @@ class CustomerForm(forms.ModelForm):
         widget=forms.Textarea(attrs={"class": "form-control"})
     )
     locomotive = forms.ModelChoiceField(
-        label="Выберите локомотив",
+        label="Выберите Марку автомобиля",
         widget=forms.Select(attrs={"class": "form-control"}),
         queryset=Locomotive.objects.all()
     )

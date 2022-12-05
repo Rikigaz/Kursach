@@ -8,7 +8,6 @@ User = get_user_model()
 
 
 class MasterForm(forms.ModelForm):
-    """Форма для мастера"""
 
     parts = forms.ModelMultipleChoiceField(
         widget=forms.SelectMultiple(attrs={'class': 'form-control'}),

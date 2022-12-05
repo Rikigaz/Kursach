@@ -17,11 +17,9 @@ User = get_user_model()
 
 
 class DetailRepair(LoginRequiredMixin, RepairMixin, View):
-    """Детализация заявки"""
     template_name = "detail.html"
 
     def _get_form(self, repair, data=None) -> forms.ModelForm:
-        """Возвращаем форму для роли пользователя"""
         user_forms = {
             Role.CUSTOMER: None,
             Role.TECHNICIAN: TechnicianForm(
@@ -61,13 +59,11 @@ class DetailRepair(LoginRequiredMixin, RepairMixin, View):
 
 
 class ListRepair(LoginRequiredMixin, RepairMixin, ListView):
-    """Список заявок"""
     template_name = "repairs.html"
     model = Repair
     paginate_by = 5
 
     def get_queryset(self):
-        """Возвращаем заявки для пользователей по статусу заявки"""
         _filter = self._get_repair_filter(self.request.user)
         return Repair.objects.filter(**_filter)
 

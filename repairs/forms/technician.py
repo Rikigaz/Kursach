@@ -4,7 +4,6 @@ from repairs.models import PlacesToWork, Repair, Status, TypeRepair
 
 
 class TechnicianForm(forms.ModelForm):
-    """Форма для работы с заявкой для техника"""
 
     description = forms.CharField(
         widget=forms.Textarea(attrs={'class': 'form-control'})

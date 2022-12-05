@@ -4,7 +4,6 @@ from repairs.models import Repair, Status
 
 
 class WorkerForm(forms.ModelForm):
-    """Форма для Автомиханика"""
 
     status = forms.ChoiceField(
         widget=forms.Select(attrs={'class': 'form-control'}),

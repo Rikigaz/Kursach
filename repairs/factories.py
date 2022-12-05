@@ -10,7 +10,7 @@ from repairs.models import (
 class TypeRepairFactory(factory.django.DjangoModelFactory):
     """Фабрика для типов ремонта"""
 
-    name = factory.fuzzy.FuzzyChoice(['ТО2', 'ТО3', 'ТР1', 'ТР2', 'ТР3'])
+    name = factory.fuzzy.FuzzyChoice(['ТО1', 'ТО2', 'ТО3', 'ТР1', 'ТР2', 'ТР3'])
     hour = factory.fuzzy.FuzzyInteger(5, 12)
 
     class Meta:

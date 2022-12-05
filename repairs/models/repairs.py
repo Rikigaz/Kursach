@@ -3,7 +3,6 @@ from django.urls import reverse
 
 
 class Status(models.TextChoices):
-    """Статусы для заявок"""
     CREATED = 'CREATED', 'Новая заявка от клиента'
     CONFIRMED = 'CONFIRMED', 'Подтверждена автомехаником'
     READY_TO_WORK = 'READY_TO_WORK', 'Готова к работе'
@@ -14,7 +13,6 @@ class Status(models.TextChoices):
 
 
 class Repair(models.Model):
-    """Заявка на ремонт"""
 
     users = models.ManyToManyField(
         to="users.User", related_name="repairs",
