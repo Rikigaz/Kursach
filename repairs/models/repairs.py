@@ -34,7 +34,7 @@ class Repair(models.Model):
     )
     locomotive = models.ForeignKey(
         "repairs.Locomotive", related_name="locomotive_repairs",
-        on_delete=models.PROTECT, verbose_name="Локомотив",
+        on_delete=models.PROTECT, verbose_name="Марка Автомобиля",
         null=True, blank=True
     )
     type_repair = models.ForeignKey(

@@ -1,13 +1,58 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Home page</h1>
     <hr>
-
+    <h6>Аккаунт:
     {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">Logout</a>
+        <a type="submit" class="button_out" href="{% url 'logout' %}">Выйти</a>
     {% else %}
-        <a href="{% url 'login' %}">Login</a> |
-        <a href="{% url 'register' %}">Register</a>
+        <a type="submit" class="button_out" href="{% url 'login' %}">Войти</a> или
+        <a type="submit" class="button_out" href="{% url 'register' %}">Зарегестрировать</a>
     {% endif %}
+    </h6>
+    <h1>Домашняя страница</h1>
+    <hr>
+<section class="press">
+    <div class="container">
+        <h2 class="section-title">Немного о нас</h2>
+        <blockquote>
+            <p class="press-detail"> - Мы занимаемся моногими марками автомобилей, начиная от Лад и заканчивая Лексусами. Наша компания была организована, при усилии пяти человек, с огромным стремлением сделать свой бизнес. Мы обслужили уже более 14 тысяч автомобилей, смогли устронить более 21 тысячи неисправностей и никогда не знали что такое <h6>"Не возможно!".</h6></p>
+            <div class="press-info">
+                <cite>Директор Автомастерской "Колесница"</cite>
+            </div>
+            <hr>
+            <img class="img-groop" src="/static/img/XXL.png"  height="850">
+            <h4 class="h4_txt">Вид автомастерской</h4>
+
+
+
+        </blockquote>
+    </div>
+</section>
+<section class="history">
+    <div class="container">
+        <h2 class="section-title">Контактные данные</h2>
+        <dl>
+            <dt>
+                <i><a>Директор:</a> Иванов Иван Иванович.</i>
+            </dt>
+            <dd>
+                <p>Телефон: 8 (963) 234-62-54</p>
+                <p>Email: Ivan228@kolesa.ru</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <i><a>Администратор:</a> Лепихин Игорь Михайлович.</i>
+            </dt>
+            <dd>
+                <p>Телефон: 8 (908) 908-90-09</p>
+                <p>Email: igor1313@kolesa.ru</p>
+            </dd>
+        </dl>
+        <hr class="end">
+
+    </div>
+</section>
+
 {% endblock %}

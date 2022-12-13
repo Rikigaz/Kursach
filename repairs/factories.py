@@ -8,7 +8,7 @@ from repairs.models import (
 
 
 class TypeRepairFactory(factory.django.DjangoModelFactory):
-    """Фабрика для типов ремонта"""
+
 
     name = factory.fuzzy.FuzzyChoice(['ТО1', 'ТО2', 'ТО3', 'ТР1', 'ТР2', 'ТР3'])
     hour = factory.fuzzy.FuzzyInteger(5, 12)
@@ -18,7 +18,7 @@ class TypeRepairFactory(factory.django.DjangoModelFactory):
 
 
 class WorksFactory(factory.django.DjangoModelFactory):
-    """Фабрика работ"""
+
 
     name = factory.fuzzy.FuzzyChoice(places_work_data)
     type_repair = factory.SubFactory(TypeRepairFactory)
@@ -28,7 +28,7 @@ class WorksFactory(factory.django.DjangoModelFactory):
 
 
 class PlacesToWorkFactory(factory.django.DjangoModelFactory):
-    """Фабрика для мест ремонта"""
+
 
     name = factory.fuzzy.FuzzyChoice(places_work_data)
 
@@ -37,7 +37,7 @@ class PlacesToWorkFactory(factory.django.DjangoModelFactory):
 
 
 class PartsFactory(factory.django.DjangoModelFactory):
-    """Фабрика запчастей"""
+
 
     name = factory.fuzzy.FuzzyChoice(parts_data)
 
@@ -46,7 +46,7 @@ class PartsFactory(factory.django.DjangoModelFactory):
 
 
 class LocomotiveFactory(factory.django.DjangoModelFactory):
-    """Фабрика локомотивов"""
+
 
     name = factory.fuzzy.FuzzyChoice(locomotives_data)
 
@@ -55,7 +55,7 @@ class LocomotiveFactory(factory.django.DjangoModelFactory):
 
 
 class RepairFactory(factory.django.DjangoModelFactory):
-    """Фабрика заявки"""
+
 
     description = factory.Faker('paragraph')
     status = factory.fuzzy.FuzzyChoice(Status.values)

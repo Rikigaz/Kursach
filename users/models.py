@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Role(models.TextChoices):
-    """Роли пользователей"""
+
 
     CUSTOMER = 'CUSTOMER', 'Клиент'
     TECHNICIAN = 'TECHNICIAN', 'Техник'
@@ -25,3 +25,5 @@ class User(AbstractUser):
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
+
+
