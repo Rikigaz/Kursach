@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Удоление заявки</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <hr>
+        <p>Вы действительно хотите удолить заявку?</p>
+        <input type="submit" class="btn btn-success" value="Да" />
+        <a type="submit" class="btn btn-success" href="{% url 'repairs:list' %}">Нет</a>
+    </form>
+{% endblock %}

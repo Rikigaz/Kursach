@@ -4,7 +4,7 @@ from django.urls import reverse
 
 class Status(models.TextChoices):
     CREATED = 'CREATED', 'Новая заявка от клиента'
-    CONFIRMED = 'CONFIRMED', 'Подтверждена автомехаником'
+    CONFIRMED = 'CONFIRMED', 'Подтверждена автотехником'
     READY_TO_WORK = 'READY_TO_WORK', 'Готова к работе'
     PROGRESS = 'PROGRESS', 'В работе'
     VERIFICATION = 'VERIFICATION', 'Ремонт выполнен'
@@ -59,3 +59,6 @@ class Repair(models.Model):
 
     def get_absolute_url(self):
         return reverse("repairs:detail", kwargs={"pk": self.pk})
+
+    def get_absolute_url_delete(self):
+        return reverse("repairs:delete", kwargs={"pk": self.pk})

@@ -48,6 +48,9 @@
                         <td>{{ repair.get_status_display }}</td>
                     <td>
                         <a href="{{ repair.get_absolute_url }}">Открыть</a>
+                        {% if user.role == 'TECHNICIAN' %}
+                            <a href="{{ repair.get_absolute_url_delete }}">Удалить заявку</a>
+                        {% endif %}
                     </td>
                     </tr>
                 {% endfor %}

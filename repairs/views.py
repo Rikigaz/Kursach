@@ -4,6 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404, render
 from django.views import View
 from django.views.generic import FormView, ListView
+from django.views.generic.edit import DeleteView
 
 from repairs.forms.customer import CustomerForm
 from repairs.forms.master import MasterForm
@@ -77,3 +78,8 @@ class CreateRepair(CustomerLoginRequiredMixin, FormView):
         repair = form.save()
         repair.users.add(self.request.user)
         return super().form_valid(form)
+
+class DeleteView(DeleteView):
+    model = Repair
+    template_name = 'repeirs_delete.html'
+    success_url = '/repairs/'
