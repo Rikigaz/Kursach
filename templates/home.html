@@ -6,8 +6,8 @@
     {% if user.is_authenticated %}
         <a type="submit" class="button_out" href="{% url 'logout' %}">Выйти</a>
     {% else %}
-        <a type="submit" class="button_out" href="{% url 'login' %}">Войти</a> или
-        <a type="submit" class="button_out" href="{% url 'register' %}">Зарегестрировать</a>
+        <a type="submit" class="button_out" href="{% url 'login' %}">Авторизация</a> или
+        <a type="submit" class="button_out" href="{% url 'register' %}">Регистрация</a>
     {% endif %}
     </h6>
     <h1>Домашняя страница</h1>
@@ -50,6 +50,29 @@
                 <p>Email: igor1313@kolesa.ru</p>
             </dd>
         </dl>
+        <dl>
+            <dt>
+                <i><a>Автотехник 1:</a> Вася Пупкин.</i>
+            </dt>
+            <dd>
+                <p>Телефон: 8 (908) 905-99-00</p>
+                <p>Email: test_master1@mail.ru</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <i><a>Автотехник 2:</a> Олег Палпалыч.</i>
+            </dt>
+            <dd>
+                <p>Телефон: 8 (958) 972-90-34</p>
+                <p>Email: test_master2@mail.ru</p>
+            </dd>
+        </dl>
+        <hr>
+        <section class="press">
+            <h2>Адрес</h2>
+            <h5>Свердловская обд., г.Первоуральск, ул.Вайнера, 5 постройка. </h5>
+        </section>
         <hr class="end">
 
     </div>

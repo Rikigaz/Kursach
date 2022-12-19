@@ -10,14 +10,17 @@ User = get_user_model()
 class MasterForm(forms.ModelForm):
 
     parts = forms.ModelMultipleChoiceField(
+        label="Запчасти:",
         widget=forms.SelectMultiple(attrs={'class': 'form-control'}),
         queryset=Parts.objects.all()
     )
     users = forms.ModelMultipleChoiceField(
+        label="Автомеханики:",
         widget=forms.SelectMultiple(attrs={'class': 'form-control'}),
         queryset=User.objects.filter(role=Role.WORKER)
     )
     status = forms.ChoiceField(
+        label="Статус:",
         widget=forms.Select(attrs={'class': 'form-control'}),
         choices=[
             item for item in Status.choices if item[0] in (
