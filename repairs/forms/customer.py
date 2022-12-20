@@ -6,7 +6,7 @@ from repairs.models import Repair, Locomotive
 class CustomerForm(forms.ModelForm):
 
     description = forms.CharField(
-        label="Описание поломки",
+        label="Описание",
         widget=forms.Textarea(attrs={"class": "form-control"})
     )
     locomotive = forms.ModelChoiceField(

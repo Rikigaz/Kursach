@@ -7,7 +7,7 @@ class Role(models.TextChoices):
 
 
     CUSTOMER = 'CUSTOMER', 'Клиент'
-    TECHNICIAN = 'TECHNICIAN', 'Техник'
+    TECHNICIAN = 'TECHNICIAN', 'Автотехник'
     MASTER = 'MASTER', 'Мастер'
     WORKER = 'WORKER', 'Автомеханик'
 

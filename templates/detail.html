@@ -8,6 +8,14 @@
     <form action="{% url 'repairs:detail' pk=repair.pk %}" method="post">
         {{ form }}
         {% csrf_token %}
-        <button type="submit" class="btn btn-success">Обновить</button>
+        {% if user.role == 'TECHNICIAN' %}
+                <button type="submit" class="btn btn-success">Обновить</button>
+        {% endif %}
+        {% if user.role == 'MASTER' %}
+                <button type="submit" class="btn btn-success">Обновить</button>
+        {% endif %}
+        {% if user.role == 'WORKER' %}
+                <button type="submit" class="btn btn-success">Обновить</button>
+        {% endif %}
     </form>
 {% endblock content %}
